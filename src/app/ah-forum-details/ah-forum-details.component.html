@@ -1,1 +1,10 @@
-<p>ah-forum-details works!</p>
+<div class="text-body" style="width: 36rem;">
+  <img class="card-img-top" [src]="image" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ title }}</h5>
+    <p class="card-text">{{text}}</p>
+    <a href="#" class="btn btn-primary" [routerLink]="['']">Go back</a>
+    <h5 class="card-footer">Id: {{ id }}</h5>
+  </div>
+</div>
+

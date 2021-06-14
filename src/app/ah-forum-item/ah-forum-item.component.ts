@@ -1,11 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-ah-forum-item',
+  selector: 'ah-forum-item',
   templateUrl: './ah-forum-item.component.html',
   styleUrls: ['./ah-forum-item.component.css']
 })
 export class AhForumItemComponent implements OnInit {
+
+  @Input() id?: number = 0;
+  @Input() image?: string = '';
+  @Input() title?: string = '';
+  @Input() text?: string = '';
 
   constructor() { }
 

@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { AhForumComponent } from './ah-forum/ah-forum.component';
 import { AhForumItemComponent } from './ah-forum-item/ah-forum-item.component';
 import { AhForumDetailsComponent } from './ah-forum-details/ah-forum-details.component';
+import {HttpClientModule} from "@angular/common/http";
+import {AHDataService} from "./services/ah-data.service";
 
 @NgModule({
   declarations: [
@@ -16,9 +18,12 @@ import { AhForumDetailsComponent } from './ah-forum-details/ah-forum-details.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    AHDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

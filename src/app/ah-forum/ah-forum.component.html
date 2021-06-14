@@ -1,1 +1,8 @@
-<p>ah-forum works!</p>
+<div *ngFor="let item of items$">
+  <ah-forum-item [id]="item.id" [image]="item.image" [title]="item.title" [text]="item.text">
+  </ah-forum-item>
+</div>
+<div *ngIf="!items$?.length">
+  No forum posts.
+</div>
+
